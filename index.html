@@ -10,6 +10,35 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #1a1a1a;
+    scroll-behavior: smooth;
+}
+
+/* Tab 导航栏 */
+.tab-nav {
+    background: #0b1f3a;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 14px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1e3a5f;
+}
+
+.tab-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 0;
+    transition: 0.2s;
+}
+
+.tab-nav a:hover {
+    color: #60a5fa;
+    border-bottom: 2px solid #60a5fa;
 }
 
 header {
@@ -32,11 +61,6 @@ header .logo {
 
 header h1 {
     display: none;
-}
-
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
 }
 
 header p {
@@ -96,10 +120,17 @@ footer {
 </style>
 
 </head>
-
 <body>
 
-<header style="
+<!-- 新增 Tab 导航栏 -->
+<div class="tab-nav">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Nexusfreight</a>
+    <a href="#quote">Get a Quote</a>
+</div>
+
+<header id="home" style="
 background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('logistics.jpg');
 background-size: cover;
 background-position: center;
@@ -109,10 +140,10 @@ position: relative;
 ">
     <img src="logo.png" class="logo" alt="Nexusfreight">
     <p>Your trusted partner for seamless logistics across New Zealand and beyond</p>
-    <button>Get a Quote</button>
+    <button onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
 </header>
 
-<section>
+<section id="services">
 <h2>Our Services</h2>
 <div class="services">
 
@@ -143,7 +174,7 @@ position: relative;
 </div>
 </section>
 
-<section>
+<section id="why-us">
 <h2>Why Nexusfreight</h2>
 <ul>
 <li>Specialists in large and non-standard cargo</li>
@@ -154,7 +185,7 @@ position: relative;
 </ul>
 </section>
 
-<section>
+<section id="quote">
 <h2>Get a Quote</h2>
 <p>Email: hello@nexusfreight.co.nz</p>
 </section>
