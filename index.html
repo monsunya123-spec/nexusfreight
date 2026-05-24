@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexusfreight</title>
+<title>Nexusfreight – Logistics & China Sourcing</title>
 
 <style>
 body {
@@ -44,7 +44,6 @@ body {
 header {
     background: #0b1f3a;
     color: white;
-    padding: 80px 20px;
     text-align: center;
     position: relative;
 }
@@ -59,13 +58,20 @@ header .logo {
     background: transparent;
 }
 
-header p {
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('logistics.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+}
+
+.hero p {
     font-size: 18px;
     max-width: 700px;
     margin: auto;
 }
 
-button {
+button, .cta-button {
     margin-top: 20px;
     padding: 12px 24px;
     border: none;
@@ -74,6 +80,12 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .cta-button:hover {
+    background: #1e4baf;
 }
 
 section {
@@ -87,24 +99,30 @@ h2 {
     margin-bottom: 40px;
 }
 
-.services {
+.services, .grid-2, .grid-3, .steps {
     display: grid;
+    gap: 30px;
+}
+
+.services {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.steps {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
 }
 
 .card {
     border: 1px solid #eee;
     padding: 20px;
     border-radius: 10px;
-    cursor: pointer;
-    transition: 0.2s;
     background: white;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card img {
@@ -113,7 +131,17 @@ h2 {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-    display: block;
+}
+
+.step-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+ul {
+    line-height: 1.8;
 }
 
 footer {
@@ -123,220 +151,126 @@ footer {
     padding: 30px;
 }
 
-/* 弹窗样式 */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    max-width: 550px;
-    width: 90%;
-    padding: 28px;
-    border-radius: 24px;
-    position: relative;
-    max-height: 85vh;
-    overflow-y: auto;
-}
-
-.close {
-    position: absolute;
-    right: 20px;
-    top: 12px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #2563eb;
+.pricing-note {
+    background: #f4f7fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
 hr {
-    margin: 16px 0;
+    margin: 32px 0;
+}
+
+@media (max-width: 700px) {
+    .tab-nav {
+        gap: 20px;
+    }
+    .hero {
+        padding: 60px 20px;
+    }
 }
 </style>
 </head>
 <body>
 
 <div class="tab-nav">
-    <a href="#home">Home</a>
+    <a href="index.html">Home</a>
     <a href="#services">Services</a>
-    <a href="#why-us">Why Nexusfreight</a>
-    <a href="#quote">Get a Quote</a>
+    <a href="sourcing.html">Sourcing</a>
+    <a href="#why">Why Nexusfreight</a>
+    <a href="#pricing">Pricing</a>
 </div>
 
-<header id="home" style="
-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('logistics.jpg');
-background-size: cover;
-background-position: center;
-color: white;
-padding: 100px 20px;
-position: relative;
-">
+<header>
     <img src="logo.png" class="logo" alt="Nexusfreight">
-    <p>Your trusted partner for seamless logistics across New Zealand and beyond</p>
-    <button onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+    <div class="hero">
+        <p>Your trusted partner for seamless logistics across New Zealand and beyond</p>
+        <button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+    </div>
 </header>
 
+<!-- Services 新版 4 个 -->
 <section id="services">
-<h2>Our Services</h2>
-<div class="services" id="serviceCards">
-    <div class="card" data-service="large">
-        <img src="large-item.jpeg" alt="Personal Large Item">
-        <h3>Personal Large Item</h3>
-        <p>Door-to-door delivery for bulky goods such as furniture and oversized cargo.</p>
+    <h2>What We Move & Manage</h2>
+    <div class="services">
+        <div class="card">
+            <img src="large-item.jpeg" alt="Personal & Oversized Items">
+            <h3>Personal & Oversized Items</h3>
+            <p>Furniture, bikes, sports gear, personal effects – sea or air freight from China to NZ.</p>
+        </div>
+        <div class="card">
+            <img src="lcl.jpg" alt="Commercial & Bulk Cargo">
+            <h3>Commercial & Bulk Cargo</h3>
+            <p>LCL, FCL, palletised goods – flexible and cost‑effective for businesses of any size.</p>
+        </div>
+        <div class="card">
+            <img src="Customs Advisory.png" alt="Customs & Biosecurity">
+            <h3>Customs & Biosecurity Clearance</h3>
+            <p>NZ Customs, MPI, documentation – we handle the border so you don’t have to.</p>
+        </div>
+        <div class="card">
+            <img src="warehouse.jpg" alt="Warehousing & Last‑Mile">
+            <h3>Warehousing & NZ Last‑Mile</h3>
+            <p>Storage, pick & pack, and final delivery across North & South Island.</p>
+        </div>
     </div>
-    <div class="card" data-service="commercial">
-        <img src="lcl.jpg" alt="Commercial Cargo">
-        <h3>Commercial Cargo</h3>
-        <p>From full container loads to smaller LCL shipments, we offer flexible and efficient solutions tailored to your business needs.</p>
-    </div>
-    <div class="card" data-service="customs">
-        <img src="Customs Advisory.png" alt="Customs Advisory">
-        <h3>Customs Advisory</h3>
-        <p>Support with documentation, duties and smooth customs clearance.</p>
-    </div>
-    <div class="card" data-service="3pl">
-        <img src="warehouse.jpg" alt="3PL & Last-Mile">
-        <h3>3PL & Last-Mile</h3>
-        <p>Warehousing, pick & pack and final delivery across New Zealand.</p>
-    </div>
-</div>
 </section>
 
-<section id="why-us">
-<h2>Why Nexusfreight</h2>
-<ul>
-<li>Specialists in large and non-standard cargo</li>
-<li>Flexible solutions for individuals and businesses</li>
-<li>End-to-end logistics</li>
-<li>Full shipment visibility</li>
-<li>Secure and insured transport</li>
-</ul>
+<!-- More Than Just Logistics (Sourcing 引流) -->
+<section>
+    <h2>More Than Just Logistics</h2>
+    <div class="grid-2">
+        <div class="card">
+            <h3>We also help you source, quality‑check, and ship from China.</h3>
+            <p>Most freight forwarders only see your goods at the port.<br>We start at the factory.</p>
+            <p>Through our <strong>China Sourcing & Procurement Advisory</strong> – led by founder Jessie Hong (15+ years in procurement) – we help Kiwi businesses find reliable suppliers, negotiate pricing, ensure quality, and manage export docs. Then we ship it, clear it, and deliver it.</p>
+            <p><strong>One partner. From factory floor to your door.</strong></p>
+            <a href="sourcing.html" class="cta-button">Learn More About Sourcing</a>
+        </div>
+    </div>
 </section>
 
-<section id="quote">
-<h2>Get a Quote</h2>
-<p>Email: hello@nexusfreight.co.nz</p>
+<!-- How We Simplify Your Supply Chain -->
+<section>
+    <h2>How We Simplify Your Supply Chain</h2>
+    <div class="steps">
+        <div><div class="step-number">1</div><h3>Source</h3><p>Find & vet suppliers (Jessie‑led)</p></div>
+        <div><div class="step-number">2</div><h3>Ship</h3><p>Sea / air freight, no weight tricks</p></div>
+        <div><div class="step-number">3</div><h3>Clear</h3><p>Customs, MPI, documentation</p></div>
+        <div><div class="step-number">4</div><h3>Deliver</h3><p>NZ last‑mile & 3PL</p></div>
+    </div>
+</section>
+
+<!-- Why Nexusfreight -->
+<section id="why">
+    <h2>Why Nexusfreight</h2>
+    <ul>
+        <li>One‑stop supply chain – from factory sourcing to customer delivery</li>
+        <li>Full transparency – no hidden costs, no weight tricks</li>
+        <li>China sourcing & procurement – we help you buy, not just ship</li>
+        <li>End‑to‑end accountability – one team, one point of contact</li>
+        <li>Tailored for individuals & businesses – furniture, e‑commerce, commercial cargo</li>
+    </ul>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+    <h2>Indicative Pricing (Sea Freight – China to Auckland)</h2>
+    <div class="pricing-note">
+        <p>Final price is based on actual weight / volumetric weight (whichever higher). We provide a transparent breakdown before shipping.</p>
+        <ul>
+            <li><strong>From NZD 2.69/kg</strong> (no repack)</li>
+            <li><strong>From NZD 3.19/kg</strong> (repack)</li>
+        </ul>
+        <p><strong>Sourcing & Procurement Advisory:</strong><br>Free 30‑min initial consultation | Project‑based or hourly fee</p>
+        <a href="mailto:jessie@nexusfreight.co.nz" class="cta-button">Contact Jessie for a quote</a>
+    </div>
 </section>
 
 <footer>
-<p>© 2026 Nexusfreight</p>
+    <p>© 2026 Nexusfreight – Logistics & China Sourcing</p>
 </footer>
-
-<!-- 弹窗结构 -->
-<div id="serviceModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modalBody"></div>
-    </div>
-</div>
-
-<script>
-    // 弹窗详细内容（英文，按物流场景）
-    const serviceDetails = {
-        large: `
-            <h2>📦 Personal Large Item</h2>
-            <p><strong>Suitable for:</strong><br>
-            Furniture, bicycles, large toys, sports equipment.</p>
-            <hr>
-            <p><strong>How it's charged:</strong><br>
-            Whichever is higher — actual weight <strong>or</strong> volumetric weight (L × W × H ÷ 5000).</p>
-            <hr>
-            <p><strong>Delivery note:</strong><br>
-            Delivered to ground floor / front door only. No upstairs, no door‑to‑room.</p>
-            <hr>
-            <p><strong>Estimated delivery time:</strong><br>
-            35–45 days by sea freight (China → NZ).</p>
-        `,
-        commercial: `
-            <h2>📦 Commercial Cargo</h2>
-            <p><strong>Suitable for:</strong><br>
-            LCL (Less than Container Load), FCL (Full Container Load), palletised goods, commercial stock.</p>
-            <hr>
-            <p><strong>How it's charged:</strong><br>
-            By CBM or weight (whichever higher), plus origin & NZ local charges.</p>
-            <hr>
-            <p><strong>Key service features:</strong><br>
-            - End‑to‑end tracking<br>
-            - NZ customs clearance support<br>
-            - Flexible pickup & delivery</p>
-            <hr>
-            <p><strong>Estimated delivery time:</strong><br>
-            25–35 days depending on port & consolidation schedule.</p>
-        `,
-        customs: `
-            <h2>📦 Customs Advisory</h2>
-            <p><strong>Suitable for:</strong><br>
-            First‑time importers, sensitive goods, complex documentation cases.</p>
-            <hr>
-            <p><strong>What we help with:</strong><br>
-            - Tariff classification<br>
-            - GST & duty estimation<br>
-            - Biosecurity & MPI requirements<br>
-            - Documentation checks</p>
-            <hr>
-            <p><strong>How it's charged:</strong><br>
-            Fixed advisory fee <strong>or</strong> per‑entry service fee.</p>
-            <hr>
-            <p><strong>Outcome:</strong><br>
-            Reduce delays, avoid unexpected border charges.</p>
-        `,
-        "3pl": `
-            <h2>📦 3PL & Last‑Mile</h2>
-            <p><strong>Suitable for:</strong><br>
-            E‑commerce sellers, Shopify stores, small brands, dropshipping businesses.</p>
-            <hr>
-            <p><strong>What we offer:</strong><br>
-            - Warehousing (short‑term / long‑term)<br>
-            - Pick & pack<br>
-            - Last‑mile delivery across North & South Island</p>
-            <hr>
-            <p><strong>How it's charged:</strong><br>
-            Storage fee + pick & pack fee + delivery fee (by zone).</p>
-            <hr>
-            <p><strong>Typical turnaround:</strong><br>
-            1–3 days from order to dispatch (NZ domestic).</p>
-        `
-    };
-
-    // 获取弹窗元素
-    const modal = document.getElementById('serviceModal');
-    const modalBody = document.getElementById('modalBody');
-    const closeSpan = document.querySelector('.close');
-
-    // 给所有卡片绑定点击事件
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', () => {
-            const serviceType = card.getAttribute('data-service');
-            if (serviceDetails[serviceType]) {
-                modalBody.innerHTML = serviceDetails[serviceType];
-                modal.style.display = 'flex';
-            }
-        });
-    });
-
-    // 关闭弹窗
-    closeSpan.onclick = () => {
-        modal.style.display = 'none';
-    };
-
-    window.onclick = (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    };
-</script>
 
 </body>
 </html>
