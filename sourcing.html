@@ -81,6 +81,45 @@ h2 {
     margin-top: 0;
     color: #0b1f3a;
 }
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 30px;
+    text-align: center;
+}
+.step-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+.about-jessie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background: #f4f7fa;
+    padding: 40px;
+    border-radius: 24px;
+}
+.jessie-img {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+}
+.jessie-img img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.jessie-text {
+    flex: 2;
+}
+.jessie-text h3 {
+    margin-top: 0;
+}
 .cta-button {
     background: #2563eb;
     color: white;
@@ -104,6 +143,15 @@ footer {
 hr {
     margin: 32px 0;
 }
+ul {
+    line-height: 1.6;
+}
+@media (max-width: 700px) {
+    .about-jessie {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 </style>
 </head>
 <body>
@@ -119,9 +167,25 @@ hr {
 <header>
     <h1>China Sourcing & Procurement Advisory</h1>
     <p>Bridge the gap between your business and the right Chinese suppliers</p>
-    <p style="font-size: 16px; margin-top: 16px;">Led by Jessie Hong | 15+ years of supply chain experience in China & New Zealand</p>
 </header>
 
+<!-- Jessie 头像 + 简介区块（方案一） -->
+<section>
+    <div class="about-jessie">
+        <div class="jessie-img">
+            <img src="jessie.jpg" alt="Jessie Hong, Founder of Nexusfreight">
+        </div>
+        <div class="jessie-text">
+            <h3>Meet Jessie Hong</h3>
+            <p><strong>Founder of Nexusfreight | 15+ years in China & NZ procurement</strong></p>
+            <p>I started my career in Shanghai as a procurement professional for Inaki, a strategic Toyota supplier. I then moved to New Zealand, earned a postgraduate degree in Logistics & Supply Chain from Massey University, and worked across FMCG, dairy, and furniture retail – including Urban Sales, NZ's largest parallel importer of furniture.</p>
+            <p>Now I lead Nexusfreight’s sourcing practice. When you work with me, you work directly with a procurement professional – not a middleman.</p>
+            <p>✦ Mandarin native | ✦ End‑to‑end accountability | ✦ 8% COGS reduction track record</p>
+        </div>
+    </div>
+</section>
+
+<!-- 信任数据 + 挑战 / 解决方案 -->
 <section>
     <div class="grid-2">
         <div class="card">
@@ -133,33 +197,60 @@ hr {
             <p>We manage the entire upstream process so you don't have to. From finding the right factory to loading the container, we handle the steps most freight forwarders skip.</p>
         </div>
         <div class="card">
-            <h3>The Difference</h3>
-            <p>I'm Jessie, founder of Nexusfreight. Before starting this company, I spent over a decade as an in-house procurement manager in China and New Zealand. I've sat on both sides of the negotiating table. When you work with us on sourcing, you work directly with me – not a junior buyer or an overseas agent.</p>
+            <h3>Trusted by Kiwi Businesses</h3>
+            <p>15+ years experience | 8% COGS reduction for a major NZ furniture retailer | 100% end‑to‑end accountability</p>
         </div>
     </div>
 </section>
 
+<!-- 三步流程 -->
+<section>
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div><div class="step-number">1</div><h3>Discovery Call</h3><p>Tell us your product idea, target price, or quality concerns. Free 30‑min consultation.</p></div>
+        <div><div class="step-number">2</div><h3>Sourcing Plan</h3><p>We present shortlisted suppliers, sample plans, and a clear cost breakdown.</p></div>
+        <div><div class="step-number">3</div><h3>Start Sourcing</h3><p>We manage negotiation, quality checks, export docs, and logistics handover.</p></div>
+    </div>
+</section>
+
+<!-- 服务模块 -->
 <section>
     <h2>What We Offer</h2>
     <div class="grid-3">
-        <div class="card"><h3>Strategic Sourcing</h3><p>Supplier identification via 1688, trade shows, and industry networks; factory audits; RFQ management and total-cost analysis.</p></div>
+        <div class="card"><h3>Strategic Sourcing</h3><p>Supplier identification via 1688, trade shows, and industry networks; factory audits; RFQ management.</p></div>
         <div class="card"><h3>Procurement & Cost Reduction</h3><p>Price negotiation, VA/VE cost-down programs, contract management, supplier KPI tracking.</p></div>
         <div class="card"><h3>Quality Control & Compliance</h3><p>Pre-shipment inspections, factory visits, specification sign-off, defect resolution.</p></div>
         <div class="card"><h3>Export & Logistics Handover</h3><p>Export documentation, VAT rebate coordination, container booking, seamless transfer to Nexusfreight shipping.</p></div>
     </div>
 </section>
 
+<!-- Why Us + 能力清单 -->
 <section>
-    <h2>Why Choose Us</h2>
-    <ul>
-        <li>✓ 15+ years of procurement experience in automotive, FMCG, and retail</li>
-        <li>✓ Mandarin native | Japanese business proficiency – no language gap</li>
-        <li>✓ Proven results: 8% COGS reduction for a major NZ furniture retailer</li>
-        <li>✓ End-to-end accountability: One person, one phone number, from sourcing to delivery</li>
-        <li>✓ Backed by Nexusfreight's logistics network</li>
-    </ul>
+    <h2>Why Choose Nexusfreight Sourcing</h2>
+    <div class="grid-2">
+        <div class="card">
+            <h3>Our Edge</h3>
+            <ul>
+                <li>✓ 15+ years of procurement experience in automotive, FMCG, and retail</li>
+                <li>✓ Mandarin native – no language gap</li>
+                <li>✓ Proven results: 8% COGS reduction for a major NZ furniture retailer</li>
+                <li>✓ End-to-end accountability: one person, one phone number</li>
+                <li>✓ Backed by Nexusfreight's logistics network</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>What We Help Source</h3>
+            <ul>
+                <li>Furniture & Homeware</li>
+                <li>Industrial & Automotive Parts</li>
+                <li>E‑commerce & Retail Goods</li>
+                <li>FMCG & General Merchandise</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
+<!-- CTA -->
 <section style="text-align: center;">
     <h2>Ready to source from China with confidence?</h2>
     <a href="mailto:jessie@nexusfreight.co.nz" class="cta-button">Contact Jessie for a Free 30‑Min Consultation</a>
