@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus Freight | China to NZ & Australia Freight Forwarding</title>
+<meta name="description" content="Nexus Freight helps businesses import from China to New Zealand and Australia with sea freight, air freight, customs clearance support and door-to-door logistics.">
+
+<style>
+:root {
+    --navy: #0b1f3a;
+    --blue: #2563eb;
+    --ink: #172033;
+    --muted: #5d6678;
+    --line: #dde3ee;
+    --soft: #f4f7fb;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.6;
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+.topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px clamp(20px, 5vw, 64px);
+    width: 100%;
+}
+
+.logo {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    gap: 22px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(rgba(8, 23, 42, 0.74), rgba(8, 23, 42, 0.56)),
+        url('logistics.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 140px clamp(20px, 5vw, 64px) 90px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    min-width: 0;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: #b9d2ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0 0 18px;
+    max-width: 800px;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.04;
+    letter-spacing: 0;
+}
+
+.hero h2 {
+    margin: 0 0 20px;
+    max-width: 780px;
+    font-size: clamp(20px, 3vw, 30px);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 0 0 28px;
+    font-size: 18px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 22px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: var(--blue);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button.secondary {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+section {
+    padding: 74px clamp(20px, 5vw, 64px);
+}
+
+.section-inner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    min-width: 0;
+}
+
+.section-head {
+    max-width: 760px;
+    margin-bottom: 34px;
+}
+
+.section-head.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 14px;
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 21px;
+    line-height: 1.25;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+.card p,
+.list-card p,
+.faq p {
+    color: var(--muted);
+}
+
+.soft {
+    background: var(--soft);
+}
+
+.list-card {
+    border-top: 3px solid var(--blue);
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(11, 31, 58, 0.07);
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 42px;
+    align-items: start;
+}
+
+.check-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 26px;
+    margin: 0 0 12px;
+}
+
+.check-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--blue);
+}
+
+.mini-list {
+    margin: 18px 0 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.mini-list li {
+    margin-bottom: 8px;
+}
+
+.route-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.route-list span {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 12px 14px;
+    background: white;
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.faq {
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+}
+
+.faq:first-child {
+    padding-top: 0;
+}
+
+.quote-panel {
+    background: var(--navy);
+    color: white;
+    border-radius: 8px;
+    padding: 34px;
+}
+
+.quote-panel p {
+    color: #dbe7ff;
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.quote-grid span {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: #eef4ff;
+}
+
+footer {
+    background: var(--navy);
+    color: white;
+    padding: 30px clamp(20px, 5vw, 64px);
+}
+
+.footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+@media (max-width: 860px) {
+    .topbar {
+        position: absolute;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 190px;
+    }
+
+    .grid,
+    .grid.two,
+    .split {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .logo {
+        width: 160px;
+    }
+
+    .nav {
+        gap: 8px 12px;
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .route-list,
+    .quote-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to ship from China to New Zealand or Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost depends on cargo volume, weight, origin, destination, freight method, season, Incoterms and local charges. Nexus Freight can prepare a landed cost estimate that separates freight, origin charges, destination charges, customs clearance and delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose LCL or FCL shipping from China to NZ or Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LCL is usually suitable for smaller shipments where you pay for shared container space. FCL can become more cost-effective for larger cargo, often around 15 CBM or more depending on the route, destination charges and handling requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What destination charges should I expect for LCL shipping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common destination charges can include terminal handling, documentation or delivery order fees, devanning, customs clearance, port security, biosecurity inspection and local delivery. The exact charges depend on the port, cargo and shipment terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents are required for customs clearance in New Zealand or Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common documents include a commercial invoice, packing list, bill of lading or airway bill, and any product-specific certificates such as MSDS, battery documentation, fumigation certificates or biosecurity declarations where required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Nexus Freight help with HS codes, GST, duty and compliance checks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nexus Freight can help review shipment information, prepare documents and coordinate customs clearance support. Final HS code classification, duty, GST and anti-dumping exposure depend on product details and destination regulations."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<header class="hero" id="home">
+    <div class="topbar">
+        <img src="logo.png" class="logo" alt="Nexus Freight">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#services">Services</a>
+            <a href="#guides">Guides & Costs</a>
+            <a href="#knowledge">Knowledge Hub</a>
+            <a href="#about">About</a>
+            <a href="#quote">Get a Quote</a>
+        </nav>
+    </div>
+    <div class="hero-content">
+        <p class="eyebrow">China to New Zealand & Australia Logistics</p>
+        <h1>China to New Zealand & Australia Freight Forwarding Made Simple.</h1>
+        <h2>Sea Freight | Air Freight | Customs Clearance | <span class="nowrap">Door-to-Door</span> Logistics</h2>
+        <p>Helping NZ and AU businesses import from China with reliable shipping, transparent pricing guidance and dedicated local support.</p>
+        <div class="actions">
+            <a class="button" href="#quote">Get Your Landed Cost Estimate</a>
+            <a class="button secondary" href="#guides">Explore Freight Guides</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section id="services">
+    <div class="section-inner">
+        <div class="section-head">
+            <h2>Freight services built around real import scenarios.</h2>
+            <p class="lead">Choose the right freight option based on cargo size, urgency, destination requirements and the level of support you need.</p>
+        </div>
+        <div class="grid">
+            <article class="card">
+                <img src="lcl.jpg" alt="Container freight">
+                <div class="card-body">
+                    <h3>LCL & FCL Sea Freight from China</h3>
+                    <p>Ship smaller LCL cargo or full containers from China to New Zealand and Australia with route planning, supplier coordination and destination support.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="large-item.jpeg" alt="Large cargo handling">
+                <div class="card-body">
+                    <h3>Door-to-Door Import Logistics</h3>
+                    <p>Coordinate pickup, international freight, customs support and final delivery through one practical shipping plan.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="Customs Advisory.png" alt="Customs documents">
+                <div class="card-body">
+                    <h3>Customs & Compliance Support</h3>
+                    <p>Get help preparing invoices, packing lists, HS code checks and biosecurity-related documents for NZ MPI or Australian DAFF requirements.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="soft">
+    <div class="section-inner split">
+        <div>
+            <h2>China to New Zealand freight forwarding.</h2>
+            <p class="lead">Nexus Freight helps New Zealand businesses move cargo from Chinese suppliers to Auckland, Tauranga, Wellington, Christchurch and other NZ destinations.</p>
+            <ul class="check-list">
+                <li>LCL sea freight for smaller shipments</li>
+                <li>FCL container shipping for larger cargo</li>
+                <li>Air freight for urgent or higher-value goods</li>
+                <li>Customs clearance and MPI document guidance</li>
+                <li>Door-to-door delivery options across New Zealand</li>
+            </ul>
+        </div>
+        <div class="list-card">
+            <h3>Popular China to NZ routes</h3>
+            <div class="route-list">
+                <span>China to Auckland</span>
+                <span>China to Tauranga</span>
+                <span>China to Wellington</span>
+                <span>China to Christchurch</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-inner split">
+        <div>
+            <h2>China to Australia freight forwarding.</h2>
+            <p class="lead">Plan sea freight, air freight, customs support and door-to-door delivery from China to major Australian destinations.</p>
+            <ul class="check-list">
+                <li>Freight options to Sydney, Melbourne, Brisbane, Adelaide and Perth</li>
+                <li>Guidance on GST, duties and import documents</li>
+                <li>DAFF biosecurity awareness for relevant product categories</li>
+                <li>Clear comparison between speed, cost and handling requirements</li>
+            </ul>
+        </div>
+        <div class="quote-panel">
+            <h3>Not sure what freight method fits?</h3>
+            <p>Tell us your origin, destination, cargo size and ready date. We can help compare LCL, FCL, air freight and door-to-door options.</p>
+            <a class="button" href="#quote">Request a Shipping Plan</a>
+        </div>
+    </div>
+</section>
+
+<section class="soft" id="guides">
+    <div class="section-inner">
+        <div class="section-head center">
+            <h2>Guides & Costs</h2>
+            <p class="lead">Practical freight guides for importers comparing cost, timing, customs requirements and shipping terms before requesting a quote or landed cost estimate.</p>
+        </div>
+        <div class="grid two">
+            <article class="list-card">
+                <h3>Shipping Cost Guides</h3>
+                <p><strong>Short answer:</strong> China to NZ and Australia freight cost is not just the ocean or air freight rate. A useful estimate should include origin charges, international freight, destination charges, customs clearance, duty, GST and final delivery.</p>
+                <ul class="mini-list">
+                    <li>LCL is usually affected by chargeable volume, cargo weight and destination-side LCL fees.</li>
+                    <li>FCL is usually quoted by container type, route, season and carrier space.</li>
+                    <li>Air freight is usually driven by chargeable weight, urgency and airline capacity.</li>
+                    <li>A landed cost estimate is more useful than a port-to-port freight rate because it shows the expected total cost to destination.</li>
+                </ul>
+            </article>
+            <article class="list-card">
+                <h3>Shipping Time Guides</h3>
+                <p><strong>Short answer:</strong> Port-to-port transit time is only one part of the import timeline. Door-to-door timing also depends on supplier readiness, pickup, export handling, customs clearance, biosecurity checks and local delivery availability.</p>
+                <ul class="mini-list">
+                    <li>Sea freight is usually best for planned shipments where cost matters more than speed.</li>
+                    <li>Air freight is usually better for urgent, high-value or time-sensitive cargo.</li>
+                    <li>Missed vessel closing time can push cargo to the next sailing.</li>
+                    <li>Customs inspection, MPI/DAFF biosecurity checks and port congestion can extend the final delivery timeline.</li>
+                </ul>
+            </article>
+            <article class="list-card">
+                <h3>Import Guides</h3>
+                <p><strong>Short answer:</strong> A smooth import starts before the cargo leaves China. Importers should confirm supplier readiness, cargo details, commercial documents, HS code assumptions, GST/duty exposure and any product-specific compliance requirements.</p>
+                <ul class="mini-list">
+                    <li>Commercial invoice and packing list details should match the actual cargo.</li>
+                    <li>HS code, GST, duty and anti-dumping risk should be reviewed before shipment.</li>
+                    <li>Batteries, chemicals, timber, furniture and regulated products may need extra documents.</li>
+                    <li>Wood packaging should be checked for New Zealand MPI or Australian DAFF biosecurity requirements.</li>
+                </ul>
+            </article>
+            <article class="list-card">
+                <h3>Comparison Centre</h3>
+                <p><strong>Short answer:</strong> The best shipping option depends on cargo volume, urgency, control, customs responsibility and how much destination-side support you need. The cheapest headline rate is not always the lowest landed cost.</p>
+                <ul class="mini-list">
+                    <li>LCL suits smaller shipments; FCL gives more control and can be better for larger or sensitive cargo.</li>
+                    <li>EXW gives the buyer more responsibility in China; FOB usually starts from the Chinese port.</li>
+                    <li>DAP usually leaves duty and GST to the importer; DDP may include them if agreed in the service scope.</li>
+                    <li>Online platforms can compare rates, while local forwarder support is useful for documents, compliance and landed cost planning.</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="knowledge">
+    <div class="section-inner">
+        <div class="section-head">
+            <h2>China to NZ & Australia Freight FAQ</h2>
+            <p class="lead">Straight answers to common questions about freight costs, landed cost, LCL, FCL, destination charges, documents, customs clearance and import risks.</p>
+        </div>
+        <div class="faq">
+            <h3>How much does it cost to ship from China to New Zealand or Australia?</h3>
+            <p>The cost depends on shipment volume, weight, origin city, destination, freight method, Incoterms, season and local charges. A useful quote should separate origin charges, international freight, destination charges, customs clearance, duties, GST and final delivery.</p>
+        </div>
+        <div class="faq">
+            <h3>What is a landed cost estimate?</h3>
+            <p>A landed cost estimate is the expected total cost to move goods from supplier to destination, including freight, port charges, customs clearance, duty, GST and delivery. It is more useful than looking at ocean freight alone.</p>
+        </div>
+        <div class="faq">
+            <h3>What destination charges should I expect for LCL shipping?</h3>
+            <p>Common destination charges can include terminal handling, documentation or delivery order fees, devanning, customs clearance, port security, biosecurity inspection and local delivery. The exact charges depend on port, cargo type and shipment terms.</p>
+        </div>
+        <div class="faq">
+            <h3>For LCL shipments, is the charge based on volume or weight?</h3>
+            <p>LCL is normally charged by revenue ton, meaning the carrier compares cargo volume and chargeable weight, then uses the greater result. The conversion ratio can vary by route and provider, so it should be confirmed before booking.</p>
+        </div>
+        <div class="faq">
+            <h3>For my shipment volume, would LCL or FCL be more cost-effective?</h3>
+            <p>LCL is often cheaper for smaller shipments because you only pay for shared container space. FCL can become more cost-effective and easier to manage when cargo volume is higher, often around 15 CBM or more depending on route, season and destination fees.</p>
+        </div>
+        <div class="faq">
+            <h3>Can my cargo be consolidated with other shipments to reduce cost?</h3>
+            <p>In some cases, consolidation can reduce unit cost, especially when timing is flexible and cargo can move with compatible shipments. Nexus Freight can review the cargo size, ready date and destination to check whether consolidation makes sense.</p>
+        </div>
+        <div class="faq">
+            <h3>How long does sea freight from China to New Zealand take?</h3>
+            <p>Port-to-port sea freight commonly takes several weeks. Door-to-door timing is longer because it includes factory pickup, export handling, sailing schedule, customs clearance, biosecurity checks and final delivery.</p>
+        </div>
+        <div class="faq">
+            <h3>What steps are most likely to delay a China to NZ or Australia shipment?</h3>
+            <p>Common delay points include supplier readiness, missed vessel closing time, customs inspection, incomplete documents, biosecurity checks, wood packaging issues, port congestion and local delivery booking availability.</p>
+        </div>
+        <div class="faq">
+            <h3>What documents do I need to import from China?</h3>
+            <p>Common documents include a commercial invoice, packing list, bill of lading or airway bill. Some products may also need MSDS, battery documentation, fumigation certificates, commodity inspection certificates or other compliance documents.</p>
+        </div>
+        <div class="faq">
+            <h3>Can Nexus Freight help check HS codes, GST, duty and anti-dumping risk?</h3>
+            <p>We can help review the product description and coordinate customs clearance support. Final HS code classification, GST, duty and anti-dumping exposure depend on detailed product information and destination country rules.</p>
+        </div>
+        <div class="faq">
+            <h3>Do I need special documents for batteries, chemicals or regulated products?</h3>
+            <p>Yes, some products require extra documents such as MSDS, UN38.3 battery test summaries, dangerous goods declarations, certificates or import permits. These should be checked before cargo leaves the supplier.</p>
+        </div>
+        <div class="faq">
+            <h3>What happens if the cargo has wooden packaging?</h3>
+            <p>New Zealand MPI and Australian DAFF both apply strict biosecurity rules. Solid wood packaging may require compliant treatment, marking or fumigation documents. Using compliant plywood or properly treated packaging can reduce inspection and delay risk.</p>
+        </div>
+        <div class="faq">
+            <h3>Can I ship under EXW, FOB, DAP or DDP terms?</h3>
+            <p>Yes, different Incoterms can be supported depending on the shipment. EXW usually requires pickup from the supplier, FOB starts from the Chinese port, DAP covers delivery to a named destination, and DDP may include duties and taxes if agreed in the service scope.</p>
+        </div>
+        <div class="faq">
+            <h3>What is the difference between DDP, DAP and FOB?</h3>
+            <p>FOB usually means the supplier is responsible up to the Chinese port. DAP means delivery is arranged to a named destination but duties and taxes are usually paid by the buyer. DDP usually includes duties and taxes in the seller's responsibility, depending on the agreed terms.</p>
+        </div>
+        <div class="faq">
+            <h3>Can I use my own forwarder to deliver cargo to a China warehouse?</h3>
+            <p>Often yes, but the warehouse needs clear receiving details, package marks, supplier references and cargo documents. Packaging should be strong enough for consolidation, container loading and international transport.</p>
+        </div>
+        <div class="faq">
+            <h3>If another LCL shipment is inspected, will my cargo be delayed?</h3>
+            <p>It can happen. LCL cargo shares container space, so customs or biosecurity inspection affecting the container or devanning process may delay other cargo in the same container. This is one reason FCL can be preferable for some urgent or sensitive shipments.</p>
+        </div>
+        <div class="faq">
+            <h3>Can a specific vessel or delivery date be guaranteed?</h3>
+            <p>Freight forwarders can plan around a preferred sailing schedule, but vessels can change because of carrier omissions, weather, port congestion, customs holds or other operational events. Critical deadlines should be planned with buffer time.</p>
+        </div>
+        <div class="faq">
+            <h3>How is Nexus Freight different from digital freight platforms?</h3>
+            <p>Digital platforms can be useful for fast comparisons. Nexus Freight focuses on practical route advice, document review, local destination support and helping importers understand the full landed cost rather than only the headline freight rate.</p>
+        </div>
+        <div class="faq">
+            <h3>Can Nexus Freight support growth from small LCL shipments to regular FCL containers?</h3>
+            <p>Yes. If your shipment volume is expected to grow, we can help compare LCL, consolidated shipments and FCL options, then adjust the service model as volume, timing and destination requirements become more predictable.</p>
+        </div>
+    </div>
+</section>
+
+<section class="soft" id="about">
+    <div class="section-inner split">
+        <div>
+            <h2>About Nexus Freight</h2>
+            <p class="lead">Nexus Freight is a New Zealand-based freight forwarding business specialising in China to New Zealand and China to Australia logistics.</p>
+            <p>We help importers make clearer shipping decisions by combining freight coordination with practical guidance around costs, timelines, customs and delivery options.</p>
+            <p>The business is led by Jessie Hong, who brings over 15 years of experience across international trade, freight and supply chain operations.</p>
+        </div>
+        <div class="list-card">
+            <h3>Why importers work with us</h3>
+            <ul class="check-list">
+                <li>Focused on China to NZ and China to Australia freight</li>
+                <li>Clear communication before and during shipment</li>
+                <li>Practical support for customs and import documents</li>
+                <li>Options matched to cargo size, urgency and budget</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="quote">
+    <div class="section-inner split">
+        <div>
+            <h2>Get Your Landed Cost Estimate</h2>
+            <p class="lead">Send the shipment details below and we will help you compare practical freight options from China to New Zealand or Australia.</p>
+            <div class="quote-grid">
+                <span>Shipping from</span>
+                <span>Shipping to</span>
+                <span>Cargo type</span>
+                <span>Volume and weight</span>
+                <span>LCL, FCL, air freight or not sure</span>
+                <span>Ready date</span>
+                <span>Customs clearance needed?</span>
+                <span>Door delivery needed?</span>
+            </div>
+        </div>
+        <div class="quote-panel">
+            <h3>Talk to a China-NZ Freight Specialist</h3>
+            <p>Email us with your cargo details, supplier location and delivery address. If you are not sure which freight option to choose, send what you know and we will guide the next step.</p>
+            <p><strong>Email:</strong> info@nexusfreight.co.nz</p>
+            <a class="button" href="mailto:info@nexusfreight.co.nz?subject=China%20Freight%20Quote%20Request">Request a Customised Shipping Plan</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <p>© 2026 Nexus Freight</p>
+        <p>China to New Zealand & Australia freight forwarding, customs support and door-to-door logistics.</p>
+    </div>
+</footer>
+
+</body>
+</html>
